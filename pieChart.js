@@ -76,7 +76,6 @@
                         , endDate: vm.chartEndDate
                     };
                     vm.$salesService.get(vm.request, _getOnSuccess, _getOnError);
-                    vm.$salesService.getAddonsByLGProductId(vm.test, _getAssociatedAddonOnSuccess, _getAssociatedAddonOnError);
                 }
 
                 function _getOnSuccess(data) {
@@ -102,21 +101,12 @@
 
                 }
                 function _getOnError() {
-
-                }
-
-                function _getAssociatedAddonOnSuccess() {
-
-                }
-
-                function _getAssociatedAddonOnError() {
-
+                    vm.$alertService.error("Get sales error");
                 }
 
                 function _goToDetail(id) {
                     vm.$window.location.href = "/admin/statistics/barchart/" + id;
                 }
-
 
 
                 /*-----------------------------------map data and time modifier functions---------------------*/
