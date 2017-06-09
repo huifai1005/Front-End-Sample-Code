@@ -39,7 +39,7 @@
                 vm.request;
 
                 vm.dataTitle1 = "Revenue of";
-                vm.dataTitle2 = " Lash Girl Products";
+                vm.dataTitle2 = "Products";
                 vm.dataTitle = vm.dataTitle1 + vm.dataTitle2;
                 vm.dataSubtitle;
 
@@ -71,12 +71,10 @@
                 function _getSalesMapOnSuccess(response) {
                     vm.items = response.data.items//set it to null if nothing comes back
 
-                    if (response && response.data.items) {
-                        
+                    if (response && response.data.items) {                       
                         vm.clearMapData();
                         vm.fillMapData(vm.items);
                         vm.showMap();
-
                     }
                     else {
                         vm.clearMapData();
@@ -84,7 +82,7 @@
                     }
                 }
                 function _getSalesMapOnError() {
-
+                   console.log("get sales map filed");
                 }
 
 
@@ -196,8 +194,6 @@
                         var lastDateISO = lastDate.toISOString();
                         var lastDateShortString = lastDateISO.slice(0, 10);
                     }
-
-
                     return {
                         firstDate: firstDateShortString
                         , lastDate: lastDateShortString
