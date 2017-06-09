@@ -5,17 +5,13 @@
 
             function SalesMapController($scope, $window, $baseController, $salesService, sweetAlert) {
                 var vm = this;
-
                 vm.$scope = $scope;
                 $baseController.merge(vm, $baseController);
-
                 vm.$window = $window;
                 vm.$salesService = $salesService;
                 vm.sweetAlert = sweetAlert;
 
-
                 vm.items;
-
                 vm.productTypeId = 1;
                 vm.targetYear;
                 vm.chartYear = new Date().getFullYear();
@@ -23,16 +19,13 @@
                 vm.targetEndDate;
                 vm.chartStartDate;
                 vm.chartEndDate;
-
                 vm.showRevenue = true;
 
                 vm.getTargetFullYear = _getTargetFullYear;
-
                 vm.initiateSalesMap = _initiateSalesMap;
                 vm.fillMapData = _fillMapData;
                 vm.clearMapData = _clearMapData;
                 vm.showMap = _showMap;
-
 
                 vm.salesData = [];
                 vm.revenueData = [];
