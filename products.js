@@ -1,15 +1,3 @@
-(function () {
-    "use strict";
-    angular.module(APPNAME).factory('productService', ProductService);
-    ProductService.$inject = ['$baseService', '$sabio'];
-
-    function ProductService($baseService, $sabio) {
-        var prodServiceObj = sabio.services.product;
-        var newService = $baseService.merge(true, {}, prodServiceObj, $baseService);
-        return newService;
-    }
-})();
-
 //routing
 (function () {
     "use strict";
@@ -31,8 +19,7 @@
                templateUrl: '/Scripts/app/templates/join/healthPick.html',
                controller: 'healthController',
                controllerAs: 'health'
-           })
-               .when('/shipping', {
+           }).when('/shipping', {
                templateUrl: '/Scripts/app/templates/join/shipping.html',
                controller: 'joinController',
                controllerAs: 'join'
