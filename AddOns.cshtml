@@ -1,4 +1,3 @@
-﻿
 @{
     ViewBag.Title = "AddOns";
     Layout = "~/Views/Shared/_LayoutPublic.cshtml";
@@ -26,7 +25,6 @@
                 max-height: 20px;
             }
 
-
         .lashpick-content .card-description {
             min-height: 10px;
             max-height: 10px;
@@ -41,13 +39,12 @@
         }
 
         .card .header-primary {
-            /*background: linear-gradient(60deg, #f6d3ff, rgba(255, 92, 148, 0.9));*/
+            background: linear-gradient(60deg, #f6d3ff, rgba(255, 92, 148, 0.9));
         }
 
         .btn-group .btn.btn-rose {
             width: 48px;
         }
-
 
         .btn.btn-rose {
             width: 150px;
@@ -97,9 +94,7 @@
                     <h1 class="title">{{head.header}}</h1>
                 </div>
             </div>
-
         </div>
-
     </div>
 }
 
@@ -223,17 +218,11 @@
                 function _onSystemEvent(event, payload) {
                     vm.header = payload[1];
                 }
-
             }
 
         })();
 
-
-
-
     </script>
-
-
 
 }
 
